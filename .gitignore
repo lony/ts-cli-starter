@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+## Compiled JavaScript files
+lib/
+**/*.js
+**/*.js.map
+
+# Sonar reports
+report.json
+
+# Artifacts by npm pack
+**/*.tgz
+
+# OS
+.DS_Store
