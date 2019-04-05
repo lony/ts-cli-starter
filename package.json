@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "Starter TypeScript CLI",
   "types": "./lib/src/index.d.ts",
+  "main": "./lib/src/index.js",
   "bin": {
-    "lony": "./lib/src/index.ts"
+    "lony": "./lib/src/index.js"
   },
   "scripts": {
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
@@ -12,7 +13,7 @@
     "build": "rm -rf ./lib && tsc -p .",
     "test": "npm run build && node ./dist/src/index.js",
     "refresh": "rm -rf ./node_modules && npm install",
-    "local-install": "npm run build && npm pack && npm i -g ${npm_package_name}-${npm_package_version}.tgz"
+    "local-install": "npm run build && npm link"
   },
   "dependencies": {
     "chalk": "^2.4.2",
